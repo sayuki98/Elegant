@@ -1,0 +1,126 @@
+@import url(burger.css);
+.section1 h2:before {
+  display: block;
+  text-transform: uppercase;
+  font: 13px OpenSansSemibold;
+  color: #d4af37;
+  margin-bottom: 4px; }
+
+.section1 h2 {
+  font: 44px OpenSansSemibold;
+  text-transform: capitalize;
+  color: #021725;
+  opacity: 0.7;
+  text-align: center; }
+
+.section1 p {
+  text-align: center;
+  color: #021725;
+  font: 18px OpenSansLight;
+  line-height: 32px; }
+
+.section1 a {
+  display: inline-block;
+  padding-left: 46px;
+  padding-right: 46px;
+  line-height: 55px;
+  border: 1px solid #000000;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'OpenSansLight';
+  color: #021725; }
+
+@font-face {
+  font-family: 'OpenSansSemibold';
+  src: url("../fonts/OpenSansSemibold.eot");
+  src: url("../fonts/OpenSansSemibold.eot") format("embedded-opentype"), url("../fonts/OpenSansSemibold.woff2") format("woff2"), url("../fonts/OpenSansSemibold.woff") format("woff"), url("../fonts/OpenSansSemibold.ttf") format("truetype"), url("../fonts/OpenSansSemibold.svg#OpenSansSemibold") format("svg"); }
+@font-face {
+  font-family: 'OpenSansLight';
+  src: url("../fonts/OpenSansLight.eot");
+  src: url("../fonts/OpenSansLight.eot") format("embedded-opentype"), url("../fonts/OpenSansLight.woff2") format("woff2"), url("../fonts/OpenSansLight.woff") format("woff"), url("../fonts/OpenSansLight.ttf") format("truetype"), url("../fonts/OpenSansLight.svg#OpenSansLight") format("svg"); }
+* {
+  padding: 0;
+  margin: 0; }
+
+.block {
+  max-width: 769px;
+  margin: auto; }
+
+.banner {
+  position: relative; }
+  .banner img {
+    width: 100%;
+    z-index: 0; }
+  .banner h1 {
+    font-family: 'OpenSansLight';
+    font-size: 80px;
+    font-weight: 300;
+    color: #f9f9f9;
+    text-transform: capitalize;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    margin-left: -482px; }
+    @media screen and (max-width: 812px) {
+      .banner h1 {
+        font-size: 50px;
+        margin-left: -301px; } }
+    .banner h1 span {
+      font-style: italic; }
+
+.container {
+  max-width: 1185px;
+  margin: auto; }
+
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding-top: 16px;
+  z-index: 1; }
+  header .menu {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-family: OpenSansSemibold;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    right: 50px;
+    bottom: 10px; }
+  header .navBurger {
+    width: 18px;
+    position: relative;
+    right: 0;
+    top: 10px; }
+    header .navBurger:before {
+      top: -4px; }
+    header .navBurger:after {
+      bottom: -4px;
+      width: 100%; }
+    header .navBurger.active:before, header .navBurger.active:after {
+      width: 100%; }
+  header .overlay {
+    background: #3977a8; }
+  header .overlayMenu ul li a {
+    border: none;
+    text-transform: uppercase;
+    font-family: 'OpenSansSemibold'; }
+    header .overlayMenu ul li a:hover, header .overlayMenu ul li a:active, header .overlayMenu ul li a:focus {
+      outline: none;
+      background: transparent; }
+  header .flex_container {
+    display: flex;
+    justify-content: space-between; }
+
+.section1 {
+  padding-top: 110px;
+  padding-bottom: 160px;
+  text-align: center; }
+  .section1 h2 {
+    padding-bottom: 51px; }
+    .section1 h2:before {
+      content: "Who we Are"; }
+  .section1 p {
+    padding-bottom: 43px; }
+
+/*# sourceMappingURL=style.css.map */

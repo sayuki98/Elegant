@@ -1,0 +1,198 @@
+@import "burger.css";
+$main_color: #f9f9f9;
+$headline_mini: 13px OpenSansSemibold;
+$headline_main: 44px OpenSansSemibold;
+$headline_mini_color: #d4af37;
+$all_text_color: #021725;
+$opacity: 0.7;
+$text_font: 18px OpenSansLight;
+%headline_mini{
+  display: block;
+  text-transform: uppercase;
+  font: $headline_mini;
+  color: $headline_mini_color;
+  margin-bottom: 4px;
+}
+
+%headline_main{
+  font: $headline_main;
+  text-transform: capitalize;
+  color: $all_text_color;
+  opacity: $opacity;
+  text-align: center;
+}
+
+%text{
+  text-align: center;
+  color: $all_text_color;
+  font: $text_font;
+  line-height: 32px;
+}
+
+%button{
+  display: inline-block;
+  padding-left: 46px;
+  padding-right: 46px;
+  line-height: 55px;
+  border: 1px solid #000000;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'OpenSansLight';
+  color: $all_text_color;
+}
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+@font-face {
+  font-family: 'OpenSansSemibold';
+  src: url('../fonts/OpenSansSemibold.eot');
+  src: url('../fonts/OpenSansSemibold.eot') format('embedded-opentype'),
+  url('../fonts/OpenSansSemibold.woff2') format('woff2'),
+  url('../fonts/OpenSansSemibold.woff') format('woff'),
+  url('../fonts/OpenSansSemibold.ttf') format('truetype'),
+  url('../fonts/OpenSansSemibold.svg#OpenSansSemibold') format('svg');
+}
+
+@font-face {
+  font-family: 'OpenSansLight';
+  src: url('../fonts/OpenSansLight.eot');
+  src: url('../fonts/OpenSansLight.eot') format('embedded-opentype'),
+  url('../fonts/OpenSansLight.woff2') format('woff2'),
+  url('../fonts/OpenSansLight.woff') format('woff'),
+  url('../fonts/OpenSansLight.ttf') format('truetype'),
+  url('../fonts/OpenSansLight.svg#OpenSansLight') format('svg');
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.block{
+  max-width: 769px;
+  margin: auto;
+}
+
+.banner{
+  position: relative;
+
+  img{
+    width: 100%;
+    z-index: 0;
+  }
+  h1{
+    font-family: 'OpenSansLight';
+    font-size: 80px;
+    font-weight: 300;
+    color: $main_color;
+    text-transform: capitalize;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    margin-left: -482px;
+    @include max-screen(812px) {
+      font-size: 50px;
+      margin-left: -301px;
+    }
+    span {
+      font-style: italic;
+    }
+  }
+}
+
+.container{
+  max-width: 1185px;
+  margin: auto;
+}
+
+header{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding-top: 16px;
+  z-index: 1;
+
+  .menu{
+    text-decoration: none;
+    color: $main_color;
+    font-family: OpenSansSemibold;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    right: 50px;
+    bottom: 10px;
+  }
+
+  .navBurger{
+    width: 18px;
+    position: relative;
+    right: 0;
+    top: 10px;
+    &:before {
+      top: -4px;
+    }
+    &:after {
+      bottom: -4px;
+      width: 100%;
+    }
+
+    &.active:before,
+    &.active:after{
+      width: 100%;
+    }
+  }
+
+  .overlay {
+    background: #3977a8;
+  }
+
+  .overlayMenu {
+    ul {
+      li {
+        a {
+          border: none;
+          text-transform: uppercase;
+          font-family: 'OpenSansSemibold';
+          &:hover,
+          &:active,
+          &:focus{
+            outline: none;
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .flex_container{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.section1{
+  padding-top: 110px;
+  padding-bottom: 160px;
+  text-align: center;
+  h2{
+    @extend %headline_main;
+    padding-bottom: 51px;
+
+    &:before{
+      content: "Who we Are";
+      @extend %headline_mini;
+    }
+  }
+  p{
+    @extend %text;
+    padding-bottom: 43px;
+  }
+
+  a{
+    @extend %button;
+  }
+}
+
