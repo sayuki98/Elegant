@@ -1,12 +1,12 @@
 @import url(burger.css);
-.section1 h2:before {
+.section1 h2:before, .section2 h2:before {
   display: block;
   text-transform: uppercase;
   font: 13px OpenSansSemibold;
   color: #d4af37;
   margin-bottom: 4px; }
 
-.section1 h2 {
+.section1 h2, .section2 h2 {
   font: 44px OpenSansSemibold;
   text-transform: capitalize;
   color: #021725;
@@ -122,5 +122,19 @@ header {
       content: "Who we Are"; }
   .section1 p {
     padding-bottom: 43px; }
+
+.section2 {
+  padding-bottom: 72px; }
+  .section2 h2 {
+    padding-bottom: 77px; }
+    .section2 h2:before {
+      content: "What we do"; }
+  .section2 img {
+    float: left;
+    width: 25%; }
+  .section2:after {
+    content: "";
+    display: block;
+    clear: both; }
 
 /*# sourceMappingURL=style.css.map */

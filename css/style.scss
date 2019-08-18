@@ -196,3 +196,26 @@ header{
   }
 }
 
+.section2{
+  padding-bottom: 72px;
+  h2{
+    @extend %headline_main;
+    padding-bottom: 77px;
+
+    &:before{
+      content: "What we do";
+      @extend %headline_mini;
+    }
+  }
+
+  img{
+    float: left;
+    width: 25%;
+  }
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+}
