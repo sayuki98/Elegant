@@ -219,3 +219,21 @@ header{
   }
 
 }
+
+.section3{
+  padding-bottom: 129px;
+  h2{
+    @extend %headline_main;
+    padding-bottom: 42px;
+
+    &:before{
+      content: "Who we are";
+      @extend %headline_mini;
+    }
+  }
+
+  p{
+    @extend %text;
+    padding-bottom: 46px;
+  }
+}
