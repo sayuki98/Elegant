@@ -197,6 +197,7 @@ header{
 }
 
 .section2{
+  width: 100%;
   padding-bottom: 72px;
   h2{
     @extend %headline_main;
@@ -208,14 +209,18 @@ header{
     }
   }
 
-  img{
-    float: left;
-    width: 25%;
-  }
-  &:after{
-    content: "";
-    display: block;
-    clear: both;
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    //align-content: center;
+    //min-height: 717px;
+    align-items: center;
+    img{
+      flex-basis: auto;
+      width: 24.9%;
+      margin-bottom: 1px;
+    }
   }
 
 }
@@ -236,4 +241,35 @@ header{
     @extend %text;
     padding-bottom: 46px;
   }
+}
+
+.container_flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 700px;
+  }
+  .man_block {
+
+      width: 200px;
+      background-color: red;
+      border: 2px solid #000000;
+    order: 3;
+    @include max-screen(768px){
+      margin: auto;
+    }
+      &:first-of-type {
+          background-color: green;
+        order: 2;
+        }
+
+      &:last-of-type {
+          background-color: yellow;
+        order: 1;
+        }
+    @include max-screen(768px){
+      flex-direction: column;
+    }
 }

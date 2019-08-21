@@ -124,18 +124,21 @@ header {
     padding-bottom: 43px; }
 
 .section2 {
+  width: 100%;
   padding-bottom: 72px; }
   .section2 h2 {
     padding-bottom: 77px; }
     .section2 h2:before {
       content: "What we do"; }
-  .section2 img {
-    float: left;
-    width: 25%; }
-  .section2:after {
-    content: "";
-    display: block;
-    clear: both; }
+  .section2 .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+    .section2 .gallery img {
+      flex-basis: auto;
+      width: 24.9%;
+      margin-bottom: 1px; }
 
 .section3 {
   padding-bottom: 129px; }
@@ -145,5 +148,31 @@ header {
       content: "Who we are"; }
   .section3 p {
     padding-bottom: 46px; }
+
+.container_flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 700px; }
+
+.man_block {
+  width: 200px;
+  background-color: red;
+  border: 2px solid #000000;
+  order: 3; }
+  @media screen and (max-width: 768px) {
+    .man_block {
+      margin: auto; } }
+  .man_block:first-of-type {
+    background-color: green;
+    order: 2; }
+  .man_block:last-of-type {
+    background-color: yellow;
+    order: 1; }
+  @media screen and (max-width: 768px) {
+    .man_block {
+      flex-direction: column; } }
 
 /*# sourceMappingURL=style.css.map */
