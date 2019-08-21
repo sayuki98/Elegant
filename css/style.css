@@ -1,14 +1,13 @@
 @import url(burger.css);
-.section1 h2:before, .section2 h2:before, .section3 h2:before {
+.section1 h2:before, .section2 h2:before, .section3 h2:before, .section3 .container_flex .man_block .info_holder span, .section4 h2:before {
   display: block;
   text-transform: uppercase;
   font: 13px OpenSansSemibold;
   color: #d4af37;
   margin-bottom: 4px; }
 
-.section1 h2, .section2 h2, .section3 h2 {
+.section1 h2, .section2 h2, .section3 h2, .section4 h2 {
   font: 44px OpenSansSemibold;
-  text-transform: capitalize;
   color: #021725;
   opacity: 0.7;
   text-align: center; }
@@ -19,7 +18,7 @@
   font: 18px OpenSansLight;
   line-height: 32px; }
 
-.section1 a {
+.section1 a, .section4 .post_holder .post a, .section4 a {
   display: inline-block;
   padding-left: 46px;
   padding-right: 46px;
@@ -38,6 +37,10 @@
   font-family: 'OpenSansLight';
   src: url("../fonts/OpenSansLight.eot");
   src: url("../fonts/OpenSansLight.eot") format("embedded-opentype"), url("../fonts/OpenSansLight.woff2") format("woff2"), url("../fonts/OpenSansLight.woff") format("woff"), url("../fonts/OpenSansLight.ttf") format("truetype"), url("../fonts/OpenSansLight.svg#OpenSansLight") format("svg"); }
+@font-face {
+  font-family: 'OpenSansRegular';
+  src: url("../fonts/OpenSansRegular.eot");
+  src: url("../fonts/OpenSansRegular.eot") format("embedded-opentype"), url("../fonts/OpenSansRegular.woff2") format("woff2"), url("../fonts/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSansRegular.ttf") format("truetype"), url("../fonts/OpenSansRegular.svg#OpenSansRegular") format("svg"); }
 * {
   padding: 0;
   margin: 0; }
@@ -148,31 +151,75 @@ header {
       content: "Who we are"; }
   .section3 p {
     padding-bottom: 46px; }
+  .section3 .container_flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    @media screen and (max-width: 768px) {
+      .section3 .container_flex {
+        flex-direction: column;
+        align-items: center; } }
+    .section3 .container_flex .man_block {
+      width: 247px;
+      background-color: #f9f9f9; }
+      .section3 .container_flex .man_block img {
+        display: block; }
+      .section3 .container_flex .man_block .info_holder {
+        padding: 16px 18px 44px; }
+        .section3 .container_flex .man_block .info_holder span {
+          margin-bottom: 12px; }
+        .section3 .container_flex .man_block .info_holder h3 {
+          text-transform: capitalize;
+          color: #021725;
+          opacity: 0.7;
+          font-size: 21px;
+          font-family: 'OpenSansRegular';
+          padding-bottom: 30px; }
+        .section3 .container_flex .man_block .info_holder p {
+          font-size: 13px;
+          font-family: 'OpenSansLight';
+          color: #021725;
+          text-align: left;
+          line-height: 24px; }
 
-.container_flex {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  height: 700px; }
-
-.man_block {
-  width: 200px;
-  background-color: red;
-  border: 2px solid #000000;
-  order: 3; }
-  @media screen and (max-width: 768px) {
-    .man_block {
-      margin: auto; } }
-  .man_block:first-of-type {
-    background-color: green;
-    order: 2; }
-  .man_block:last-of-type {
-    background-color: yellow;
-    order: 1; }
-  @media screen and (max-width: 768px) {
-    .man_block {
-      flex-direction: column; } }
+.section4 {
+  text-align: center;
+  padding-bottom: 158px; }
+  .section4 h2 {
+    padding-bottom: 51px; }
+    .section4 h2:before {
+      content: "last post"; }
+  .section4 .post_holder {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'OpenSansRegular';
+    margin-bottom: 84px;
+    color: #505d68;
+    text-align: left; }
+    .section4 .post_holder img {
+      margin: auto; }
+    .section4 .post_holder .post {
+      background-color: #f9f9f9;
+      padding: 39px 36px 60px 40px;
+      max-width: 384px;
+      box-sizing: border-box; }
+      .section4 .post_holder .post h3 {
+        font-size: 30px;
+        padding-bottom: 21px;
+        font-weight: 500; }
+        .section4 .post_holder .post h3:before {
+          content: "14 September 2014";
+          display: block;
+          font-size: 13px;
+          padding-bottom: 8px; }
+      .section4 .post_holder .post p {
+        font-size: 16px;
+        font-family: 'OpenSansLight';
+        line-height: 24px;
+        padding-bottom: 54px; }
+      .section4 .post_holder .post a {
+        line-height: 48px; }
 
 /*# sourceMappingURL=style.css.map */
