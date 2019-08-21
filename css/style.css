@@ -46,7 +46,7 @@
   margin: 0; }
 
 .block {
-  max-width: 769px;
+  max-width: 770px;
   margin: auto; }
 
 .banner {
@@ -59,15 +59,16 @@
     font-size: 80px;
     font-weight: 300;
     color: #f9f9f9;
-    text-transform: capitalize;
     position: absolute;
-    top: 44%;
-    left: 50%;
-    margin-left: -482px; }
-    @media screen and (max-width: 812px) {
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    text-align: center; }
+    @media screen and (max-width: 415px) {
       .banner h1 {
-        font-size: 50px;
-        margin-left: -301px; } }
+        font-size: 30px; } }
     .banner h1 span {
       font-style: italic; }
 
@@ -91,10 +92,7 @@ header {
     right: 50px;
     bottom: 10px; }
   header .navBurger {
-    width: 18px;
-    position: relative;
-    right: 0;
-    top: 10px; }
+    width: 18px; }
     header .navBurger:before {
       top: -4px; }
     header .navBurger:after {
@@ -104,6 +102,15 @@ header {
       width: 100%; }
   header .overlay {
     background: #3977a8; }
+  @media screen and (max-width: 768px) {
+    header .overlayMenu {
+      bottom: 40vw; } }
+  @media screen and (max-width: 736px) {
+    header .overlayMenu {
+      bottom: 1vw; } }
+  @media screen and (max-width: 415px) {
+    header .overlayMenu {
+      bottom: 40vw; } }
   header .overlayMenu ul li a {
     border: none;
     text-transform: uppercase;
@@ -111,9 +118,16 @@ header {
     header .overlayMenu ul li a:hover, header .overlayMenu ul li a:active, header .overlayMenu ul li a:focus {
       outline: none;
       background: transparent; }
+    @media screen and (max-width: 568px) {
+      header .overlayMenu ul li a {
+        font-size: 18px; } }
   header .flex_container {
     display: flex;
     justify-content: space-between; }
+    @media screen and (max-width: 1024px) {
+      header .flex_container {
+        padding-left: 10px;
+        padding-right: 10px; } }
 
 .section1 {
   padding-top: 110px;
@@ -139,9 +153,15 @@ header {
     justify-content: space-between;
     align-items: center; }
     .section2 .gallery img {
-      flex-basis: auto;
       width: 24.9%;
       margin-bottom: 1px; }
+      @media screen and (max-width: 768px) {
+        .section2 .gallery img {
+          width: auto;
+          margin: 1px; } }
+    @media screen and (max-width: 768px) {
+      .section2 .gallery {
+        justify-content: center; } }
 
 .section3 {
   padding-bottom: 129px; }
@@ -200,10 +220,13 @@ header {
     text-align: left; }
     .section4 .post_holder img {
       margin: auto; }
+      @media screen and (max-width: 415px) {
+        .section4 .post_holder img {
+          width: 100%; } }
     .section4 .post_holder .post {
       background-color: #f9f9f9;
       padding: 39px 36px 60px 40px;
-      max-width: 384px;
+      max-width: 385px;
       box-sizing: border-box; }
       .section4 .post_holder .post h3 {
         font-size: 30px;
@@ -221,32 +244,50 @@ header {
         padding-bottom: 54px; }
       .section4 .post_holder .post a {
         line-height: 48px; }
+      @media screen and (max-width: 415px) {
+        .section4 .post_holder .post {
+          max-width: 100%; } }
 
-.section5 h2 {
-  padding-bottom: 51px; }
-  .section5 h2:before {
-    content: "contact us"; }
-.section5 iframe {
-  width: 100%;
-  height: 295px;
-  border: 0;
-  display: block; }
-.section5 .contacts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.section5 {
+  padding-bottom: 80px; }
+  .section5 h2 {
+    padding-bottom: 51px; }
+    .section5 h2:before {
+      content: "contact us"; }
+  .section5 iframe {
+    width: 100%;
+    height: 295px;
+    border: 0;
+    display: block; }
+  .section5 .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f9f9f9; }
+    .section5 .contacts .contact_block {
+      padding: 48px 71px 45px;
+      text-align: center;
+      width: 241px; }
+      .section5 .contacts .contact_block h4 {
+        font: 13px OpenSansSemibold;
+        color: #505d68;
+        text-transform: uppercase;
+        padding-bottom: 42px; }
+      .section5 .contacts .contact_block p {
+        font-size: 19px;
+        font-family: 'OpenSansLight'; }
+
+footer {
   background-color: #f9f9f9; }
-  .section5 .contacts .contact_block {
-    padding: 48px 71px 45px;
-    text-align: center;
-    width: 241px; }
-    .section5 .contacts .contact_block h4 {
-      font: 13px OpenSansSemibold;
+  footer .credits {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px; }
+    footer .credits p {
       color: #505d68;
-      text-transform: uppercase;
-      padding-bottom: 42px; }
-    .section5 .contacts .contact_block p {
-      font-size: 19px;
-      font-family: 'OpenSansLight'; }
+      font-size: 16px;
+      font-family: 'OpenSansLight';
+      padding: 0 10px; }
 
 /*# sourceMappingURL=style.css.map */
